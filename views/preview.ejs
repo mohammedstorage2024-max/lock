@@ -1,0 +1,2 @@
+<%- include('partials/head', { title: `${file.title} — Stillroom` }) %>
+<body class="preview-page"><div class="standalone-preview"><div class="preview-header"><div><a href="/" class="preview-back">←</a><span class="preview-pdf-tag">PDF</span><strong><%= file.title %></strong></div><a class="button secondary small" href="/files/<%= encodeURIComponent(file.id) %>/open" download>Download <span>↓</span></a></div><iframe title="<%= file.title %>" src="/files/<%= encodeURIComponent(file.id) %>/open"></iframe></div></body></html>

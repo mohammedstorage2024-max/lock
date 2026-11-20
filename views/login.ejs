@@ -1,0 +1,12 @@
+<%- include('partials/head', { title: 'Sign in — Stillroom' }) %>
+<body>
+<div class="ambient-scene" aria-hidden="true"><span class="ambient-orb orb-one"></span><span class="ambient-orb orb-two"></span><span class="ambient-ring ring-one"></span><span class="ambient-file float-one"><b>PDF</b><i></i><i></i><i></i></span><span class="ambient-file float-two"><b>PHOTO</b><i></i><i></i></span><span class="ambient-spark spark-one">✳</span><span class="ambient-spark spark-two">✦</span></div>
+<main class="login-screen"><div class="login-glow"></div>
+  <a class="brand login-brand" href="#"><span class="brand-mark">S</span><span>stillroom<span class="brand-dot">.</span></span></a>
+  <section class="login-card glass"><div class="eyebrow"><span class="status-dot"></span> YOUR PRIVATE SPACE</div>
+    <h1>Welcome<br>back<span class="brand-dot">.</span></h1><p class="muted">A quieter place for the things that matter.</p>
+    <% if (error) { %><div class="alert error"><%= error %></div><% } %>
+    <form method="post" action="/login" class="stack-form"><input type="hidden" name="_csrf" value="<%= csrfToken %>"><label>Username<input class="field-input" type="text" name="username" value="momo" autocomplete="username" required autofocus></label><label>Password<input class="field-input" type="password" name="password" autocomplete="current-password" required></label><button class="button primary full" type="submit">Enter your space <span>↗</span></button></form>
+    <div class="login-foot"><span class="lock-icon">◈</span> Private by design · Sign in to continue</div>
+  </section><p class="login-caption">KEEP WHAT MATTERS, CLOSE.</p>
+</main></body></html>
