@@ -1,0 +1,14 @@
+[build]
+  publish = "static"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["express", "ejs", "multer", "serverless-http", "@netlify/blobs"]
+  included_files = ["views/**/*.ejs"]
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = false
